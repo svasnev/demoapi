@@ -1,0 +1,41 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="test-data" author="svasnev">
+        <sql endDelimiter=";">
+            /* system account */
+            INSERT INTO system_account (id, first_name, last_name) VALUES('d16480b2-e748-11e7-80c1-9a214cf093ae','Serhii','Vasniev');
+
+            /* Wallet */
+
+            INSERT INTO wallet (id, system_account_id, number) VALUES('68d6b91e-729c-498f-be34-a5bd9fa2add3','d16480b2-e748-11e7-80c1-9a214cf093ae','R1234567891011');
+
+            INSERT INTO wallet (id, system_account_id, number) VALUES('6f8cd5bb-ae08-45bf-82b6-0c756658c29c','d16480b2-e748-11e7-80c1-9a214cf093ae','U1234567891011');
+
+            INSERT INTO wallet (id, system_account_id, number) VALUES('1b0a8b40-dcd0-4c8f-b655-f22f85ea4c18','d16480b2-e748-11e7-80c1-9a214cf093ae','E1234567891011');
+
+            /* Card */
+
+
+            INSERT INTO card (id, system_account_id, card_number) VALUES('964d41a9-8e25-4f42-9d3e-1e32f32a3581','d16480b2-e748-11e7-80c1-9a214cf093ae','1234-5678-9101-1121');
+
+            INSERT INTO card (id, system_account_id, card_number) VALUES('9a90f7e1-757c-437f-a912-579056bbd9d1','d16480b2-e748-11e7-80c1-9a214cf093ae','1234-5678-9101-1122');
+
+
+
+
+
+
+
+
+
+        </sql>
+    </changeSet>
+
+
+
+
+</databaseChangeLog>

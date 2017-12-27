@@ -32,6 +32,9 @@
             <column name="number" type="varchar(50)">
                 <constraints nullable="false" unique="true"/>
             </column>
+            <column name="balance" type="DECIMAL" defaultValue="0.0">
+                <constraints nullable="false" />
+            </column>
         </createTable>
 
         <addForeignKeyConstraint baseColumnNames="system_account_id"
@@ -52,6 +55,9 @@
             </column>
             <column name="card_number" type="varchar(50)">
                 <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="balance" type="DECIMAL" defaultValue="0.0">
+                <constraints nullable="false" />
             </column>
         </createTable>
 

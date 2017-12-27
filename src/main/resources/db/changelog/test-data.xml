@@ -7,7 +7,7 @@
     <changeSet id="test-data" author="svasnev">
         <sql endDelimiter=";">
             /* system account */
-            INSERT INTO system_account (id, first_name, last_name) VALUES('d16480b2-e748-11e7-80c1-9a214cf093ae','Serhii','Vasniev');
+            INSERT INTO system_account (id, first_name, last_name, email) VALUES('d16480b2-e748-11e7-80c1-9a214cf093ae','Serhii','Vasniev', 's.vasnev@advcash.com');
 
             /* Wallet */
 

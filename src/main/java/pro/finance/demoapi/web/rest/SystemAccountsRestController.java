@@ -6,10 +6,7 @@ import java.util.UUID;
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import pro.finance.demoapi.domain.SystemAccount;
 import pro.finance.demoapi.repository.SystemAccountRepository;
@@ -27,6 +24,12 @@ public class SystemAccountsRestController {
 		return systemAccountRepository.findOneById(id)
 			.orElseThrow(() -> new EntityNotFoundException("System account with id" + id.toString() +  "not found"));
 
+	}
+
+	@RequestMapping(method = RequestMethod.GET, params  ="email" )
+	public SystemAccount getByEmail(@RequestParam("email") String email){
+		return systemAccountRepository.findOneByEmail(email)
+			.orElseThrow(() -> new EntityNotFoundException("System account with such email" + email + " not found"));
 	}
 
 }

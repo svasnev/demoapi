@@ -13,7 +13,7 @@ public abstract class BaseEntity {
 	@Id
 	@GeneratedValue
 	@Column(name="id", nullable = false)
-	private UUID id;
+	private UUID id = UUID.randomUUID();
 
 	public UUID getId() {
 		return id;

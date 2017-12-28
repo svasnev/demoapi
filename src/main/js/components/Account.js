@@ -14,7 +14,7 @@ export default class Account extends React.Component {
 		this.state = {account: {}};
 	}
 
-	componentWillMount() {
+	componentDidMount() {
 		client('/api/systemAccounts/' + this.props.match.params.accountId)
 			.done(response => {
 				this.setState({account: response.entity})

@@ -6,7 +6,7 @@ export default class Search extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {value: '', systemAccountId: ''};
+		this.state = {value: '', systemAccountId: '', error: ''};
 		this.handleSearch = this.handleSearch.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 		this.fillAccountData = this.fillAccountData.bind(this);

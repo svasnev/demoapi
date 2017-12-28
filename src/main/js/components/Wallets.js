@@ -10,7 +10,7 @@ export default class Wallets extends React.Component {
 	}
 
 
-	componentWillMount() {
+	componentDidMount() {
 		client('/api/' + this.props.accountId + '/wallets')
 			.done(response => {
 				this.setState({wallets: response.entity})

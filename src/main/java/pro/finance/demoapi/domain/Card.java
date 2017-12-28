@@ -10,6 +10,17 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table(name = "card")
 public class Card extends BaseEntity {
 
+	public Card(){
+
+	}
+
+	public Card(SystemAccount account, String cardNumber){
+		super();
+		this.systemAccount = account;
+		this.cardNumber = cardNumber;
+	}
+
+
 	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name = "system_account_id")

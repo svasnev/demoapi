@@ -22,4 +22,10 @@ public class RestExceptionHandler {
 		logger.info(ex.getMessage());
 	}
 
+	@ResponseStatus(value= HttpStatus.BAD_REQUEST, reason="Value not found")
+	@ExceptionHandler(IllegalArgumentException.class)
+	public void handleIllegalArgumentException(Exception ex){
+		logger.info(ex.getMessage());
+	}
+
 }

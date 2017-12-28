@@ -1,3 +1,3 @@
-## Basic api for demo projects
+## DemoApi react-js
 
-Basic backend api for demo projects based on Spring Boot and H2.
+Simple Demo project created using Spring Boot, H2 database and React js.

@@ -15,6 +15,9 @@
             <column name="last_name" type="varchar(50)">
                 <constraints nullable="false"/>
             </column>
+            <column name="email" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
     </changeSet>
 
@@ -28,6 +31,9 @@
             </column>
             <column name="number" type="varchar(50)">
                 <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="balance" type="DECIMAL" defaultValue="0.0">
+                <constraints nullable="false" />
             </column>
         </createTable>
 
@@ -49,6 +55,9 @@
             </column>
             <column name="card_number" type="varchar(50)">
                 <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="balance" type="DECIMAL" defaultValue="0.0">
+                <constraints nullable="false" />
             </column>
         </createTable>
 

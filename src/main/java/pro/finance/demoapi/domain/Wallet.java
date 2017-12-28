@@ -1,5 +1,7 @@
 package pro.finance.demoapi.domain;
 
+import java.math.BigDecimal;
+
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -15,6 +17,9 @@ public class Wallet extends BaseEntity {
 
 	@Column(name = "number", nullable = false, length = 50)
 	private String number;
+
+	@Column(name = "balance", nullable = false)
+	private BigDecimal balance = BigDecimal.ZERO;
 
 	public SystemAccount getSystemAccount() {
 		return systemAccount;
@@ -32,11 +37,20 @@ public class Wallet extends BaseEntity {
 		this.number = number;
 	}
 
+	public BigDecimal getBalance() {
+		return balance;
+	}
+
+	public void setBalance(BigDecimal balance) {
+		this.balance = balance;
+	}
+
 	@Override
 	public String toString() {
 		final StringBuilder sb = new StringBuilder("Wallet{");
 		sb.append("systemAccount=").append(systemAccount);
 		sb.append(", number='").append(number).append('\'');
+		sb.append(", balance=").append(balance);
 		sb.append('}');
 		return sb.toString();
 	}

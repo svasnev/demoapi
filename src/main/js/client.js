@@ -1,4 +1,3 @@
-
 'use strict';
 
 var rest = require('rest');

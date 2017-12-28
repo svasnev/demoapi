@@ -1,6 +1,5 @@
 const React = require('react');
 const client = require('../client');
-const Redirect = require('react-router-dom').Redirect;
 
 
 export default class Search extends React.Component {

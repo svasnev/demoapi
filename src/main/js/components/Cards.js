@@ -1,7 +1,6 @@
 const React = require('react');
 const client = require('../client');
 const CardList = require('./CardList.js').default;
-const Link = require('react-router-dom').Link;
 
 export default class Cards extends React.Component {
 
@@ -11,9 +10,11 @@ export default class Cards extends React.Component {
 	}
 
 
-	componentWillMount(){
+	componentWillMount() {
 		client('/api/' + this.props.accountId + '/cards')
-			.done(response => { console.log(response); this.setState({cards: response.entity})});
+			.done(response => {
+				this.setState({cards: response.entity})
+			});
 	}
 
 	render() {

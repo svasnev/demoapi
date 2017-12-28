@@ -1,6 +1,6 @@
 const React = require('react');
 
-export default class WalletList extends React.Component{
+export default class WalletList extends React.Component {
 	render() {
 		var wallets = this.props.wallets.map(wallet =>
 			<Wallet key={wallet.id} wallet={wallet}/>
@@ -19,7 +19,7 @@ export default class WalletList extends React.Component{
 }
 
 
-class Wallet extends React.Component{
+class Wallet extends React.Component {
 	render() {
 		return (
 			<tr>

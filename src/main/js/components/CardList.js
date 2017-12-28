@@ -1,7 +1,7 @@
 const React = require('react');
 
 
-export default class CardList extends React.Component{
+export default class CardList extends React.Component {
 	render() {
 		var cards = this.props.cards.map(card =>
 			<Card key={card.id} card={card}/>
@@ -20,7 +20,7 @@ export default class CardList extends React.Component{
 }
 
 
-class Card extends React.Component{
+class Card extends React.Component {
 	render() {
 		return (
 			<tr>

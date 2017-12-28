@@ -29,10 +29,10 @@ export default class Account extends React.Component {
 
 		switch(this.props.match.params.child){
 			case 'cards':
-				child =  <Cards accountId = {this.props.match.params.child}/>;
+				child =  <Cards accountId = {this.props.match.params.accountId}/>;
 				break;
 			case 'wallets':
-				child = <Wallets accountId = {this.props.match.params.child}/>;
+				child = <Wallets accountId = {this.props.match.params.accountId}/>;
 				break;
 			default:
 				child = null;

@@ -12,14 +12,13 @@ export default class Wallets extends React.Component {
 
 
 	componentWillMount(){
-		client('/api/' + this.props.match.params.accountId + '/wallets')
+		client('/api/' + this.props.accountId + '/wallets')
 			.done(response => {this.setState({wallets: response.entity})});
 	}
 
 	render() {
 		return ( <div>
 			<WalletList wallets={this.state.wallets}/>
-			<Link to={'/account/' + this.props.match.params.accountId + '/cards'} activeClassName="active">Cards</Link>
 		</div>)
 
 	}

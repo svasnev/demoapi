@@ -19,7 +19,6 @@ export default class Cards extends React.Component {
 	render() {
 		return ( <div>
 			<CardList cards={this.state.cards}/>
-			<Link to={'/account/' + this.props.match.params.accountId + '/wallets'} activeClassName="active">Wallets</Link>
 		</div>)
 
 	}
